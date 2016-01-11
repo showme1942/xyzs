@@ -24,5 +24,13 @@
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript"
 	src="resources/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
-	
+
+	<link rel="stylesheet" href="resources/validator/vendor/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="resources/validator/css/bootstrapValidator.css"/>
+
+    <script type="text/javascript" src="resources/validator/vendor/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="resources/validator/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="resources/validator/js/bootstrapValidator.js"></script>
+
+
 </head>
