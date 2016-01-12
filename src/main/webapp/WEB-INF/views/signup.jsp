@@ -128,34 +128,39 @@
 	                        },
 	                        stringLength: {
 	                            min: 6,
-	                            max: 30,
-	                            message: 'The username must be more than 6 and less than 30 characters long'
+	                            max: 18,
+	                            message: '用户名需大于6小于18个字符组成'
 	                        },
 	                        /*remote: {
 	                            url: 'remote.php',
 	                            message: 'The username is not available'
 	                        },*/
 	                        regexp: {
-	                            regexp: /^[a-zA-Z0-9_\.]+$/,
-	                            message: 'The username can only consist of alphabetical, number, dot and underscore'
+	                            regexp: /^[a-zA-Z0-9]+$/,//_\.
+	                            message: '用户名只能由英文字母和数字组成'
 	                        }
 	                    }
 	                },
 	                email: {
 	                    validators: {
 	                        notEmpty: {
-	                            message: 'The email address is required and can\'t be empty'
+	                            message: '请您输入邮箱地址'
 	                        },
 	                        emailAddress: {
-	                            message: 'The input is not a valid email address'
+	                            message: '您输入的邮箱地址是非法的，请核对'
 	                        }
 	                    }
 	                },
 	                password: {
 	                    validators: {
 	                        notEmpty: {
-	                            message: 'The password is required and can\'t be empty'
-	                        }
+	                            message: '密码应大于6小于18位'
+	                        },
+	               			stringLength: {
+                        	min: 6,
+                        	max: 18,
+                        	message: '用户名需大于6小于18个字符组成'
+                    },
 	                    }
 	                }
 	            }
