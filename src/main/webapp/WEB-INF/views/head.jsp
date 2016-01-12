@@ -25,6 +25,7 @@
 <script type="text/javascript"
 	src="resources/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
 
+
 	<link rel="stylesheet" href="resources/validator/vendor/bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet" href="resources/validator/css/bootstrapValidator.css"/>
 
@@ -32,5 +33,7 @@
     <script type="text/javascript" src="resources/validator/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="resources/validator/js/bootstrapValidator.js"></script>
 
-
+<script type="text/javascript"
+	src="resources/assets/js/jquery.backstretch.js"></script>
+	
 </head>
