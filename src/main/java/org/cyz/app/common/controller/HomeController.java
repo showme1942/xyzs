@@ -40,7 +40,6 @@ public class HomeController {
 	public ModelAndView getIndex() {
 		ModelAndView modelandview = new ModelAndView();
 		modelandview.setViewName("index");
-		System.out.println("123");
 		return modelandview;
 	}
 	@RequestMapping(value="/signup",method = RequestMethod.GET)
