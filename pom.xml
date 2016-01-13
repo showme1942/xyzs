@@ -127,6 +127,24 @@
 			</exclusions>
 			<scope>runtime</scope>
 		</dependency>
+		
+		<!-- Spring DATA -->
+		<dependency>
+  			<groupId>org.springframework.data</groupId>
+  			<artifactId>spring-data-mongodb</artifactId>
+  			<version>${spring-framework.data-mongodb.version}</version>
+		</dependency>
+		<dependency>
+  			<groupId>org.springframework.data</groupId>
+  			<artifactId>spring-data-mongodb-log4j</artifactId>
+  			<version>${spring-framework.data-mongodb.version}</version>
+		</dependency>
+		<dependency>
+  			<groupId>org.springframework.data</groupId>
+  			<artifactId>spring-data-mongodb-cross-store</artifactId>
+  			<version>${spring-framework.data-mongodb.version}</version>
+		</dependency>
+		
 
 		<!-- @Inject -->
 		<dependency>
