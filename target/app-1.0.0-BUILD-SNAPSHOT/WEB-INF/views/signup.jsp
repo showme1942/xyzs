@@ -4,9 +4,11 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
-<%@ include file="head.jsp" %>      
+<%@ include file="head.jsp"%>
+
+    
 <body>
-	
+
 	<!-- Top menu -->
 	<nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
 		<div class="container">
@@ -22,7 +24,7 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="top-navbar-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li><span class="li-text"> Put some text or </span> <a
+					<li><span class="li-text"> 成就你的梦想 </span> <a
 						href="#"><strong>links</strong></a> <span class="li-text">
 							here, or some icons: </span> <span class="li-social"> <a href="#"><i
 								class="fa fa-facebook"></i></a> <a href="#"><i
@@ -37,87 +39,148 @@
 
 	<!-- Top content -->
 	<div class="top-content">
-
 		<div class="inner-bg">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-8 col-sm-offset-2 text">
-						<h1>
-							<spring:message code="xyzs.title"></spring:message>会员注册
-						</h1>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6 col-sm-offset-3 form-box">
-						<form role="form" action="" method="post"
-							class="registration-form">
-
-							<fieldset>							
-								<div class="form-top">
-									<div class="form-top-right">
-										<i class="fa fa-user">用户名</i>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="page-header">
+								<h2>
+									<spring:message code="xyzs.title"></spring:message>
+									会员注册
+								</h2>
+							</div>
+							<form id="defaultForm" method="post" class="form-horizontal"
+							action="${pageContext.request.contextPath}/signup" modelAttribute="signup">
+								<div class="form-group">
+									<label class="col-lg-3 control-label">用户名<i
+										class="fa fa-user">：</i></label>
+									<div class="col-lg-5">
+										<input type="text" class="form-control" name="username" />
+										<p class="help-block">请输入6-18位由数字和英文字母组成的用户名</p>
 									</div>
-								</div>
-								<div class="form-bottom">
-									<div class="form-group">									
-										<label class="sr-only" for="form-first-name">
-											</label> <input type="text" name="form-first-name"
-											placeholder="请输入用户名"
-											class="form-first-name form-control" id="form-first-name">
-									</div>
-								</div>
-								<div class="form-top-right">
-										<i class="fa fa-key">密码</i>
 								</div>
 								<div class="form-group">
-										<label class="sr-only" for="form-password">密码</label> <input
-											type="password" name="form-password"
-											placeholder="密码" class="form-password form-control"
-											id="form-password">
-											<p class="help-block">请输入6-18位密码</p>
+									<label class="col-lg-3 control-label">密码<i
+										class="fa fa-key"></i>：</label>
+									<div class="col-lg-5">
+										<input type="password" class="form-control" name="password" />
+										<p class="help-block">请输入6-18位密码</p>
 									</div>
-									<div class="form-group">
-									<div class="form-top-right">
-										<i class="fa fa-key">请重复密码</i>
-										</div>
-										<label class="sr-only" for="form-repeat-password">重复密码
-											</label> <input type="password" name="form-repeat-password"
-											placeholder="请重复密码"
-											class="form-repeat-password form-control"
-											id="form-repeat-password">
-											<p class="help-block">请输入6-18位密码</p>
-									</div>
-							</fieldset>
-
-							<fieldset>
-								<div class="form-bottom">
-									<div class="form-group">
-									<i class="fa fa-envelope">邮箱</i>
-										<label class="sr-only" for="form-email">邮箱</label> <input
-											type="text" name="form-email" placeholder="邮箱地址"
-											class="form-email form-control" id="form-email">
-											<p class="help-block">请输入您的邮箱地址：例如xxx@xxx.com</p>
-									</div>
-									<div class="form-group">
-									<i class="fa fa-phone">手机号</i>
-										<label class="sr-only" for="form-telephone">手机号</label> <input
-											type="text" name="form-telephone" placeholder="手机号"
-											class="form-email form-control" id="form-telephone">
-											<p class="help-block">请输入您的手机号</p>
-									</div>									
-									<button type="submit" class="btn btn-success">注册!</button>
-									<button type="reset" class="btn btn-defult">重置</button>
 								</div>
-							</fieldset>
+
+								<div class="form-group">
+									<label class="col-lg-3 control-label">确认密码<i
+										class="fa fa-key"></i>：</label>
+									<div class="col-lg-5">
+										<input type="password" class="form-control" name="password" />
+										<p class="help-block">请重复输入密码</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">电子邮箱<i
+										class="fa fa-envelope"></i>：</label>
+									<div class="col-lg-5">
+										<input type="text" class="form-control" name="email" />
+										<p class="help-block">请输入您的邮箱地址：例如xxx@xxx.com</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">手机号<i
+										class="fa fa-phone"></i>：</label>
+									<div class="col-lg-5">
+										<input type="text" class="form-control" name="username" />
+										<p class="help-block">请输入您的手机号</p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="col-lg-9 col-lg-offset-3">
+										<button type="submit" path="" class="btn btn-primary">注册!</button>
+										<button type="reset" class="btn btn-defult">重置</button>
+									</div>
+								</div>
 							</form>
-							
+						</div>
 					</div>
 				</div>
-			</div>
+
+
 		</div>
 
 	</div>
 	<script>
+	$(document).ready(function() {
+	    $('#defaultForm')
+	        .bootstrapValidator({
+	            message: '输入的值是无效的',
+	            feedbackIcons: {
+	                valid: 'glyphicon glyphicon-ok',
+	                invalid: 'glyphicon glyphicon-remove',
+	                validating: 'glyphicon glyphicon-refresh'
+	            },
+	            fields: {
+	                username: {
+	                    message: '用户名是无效的',
+	                    validators: {
+	                        notEmpty: {
+	                            message: '用户名不能为空'
+	                        },
+	                        stringLength: {
+	                            min: 6,
+	                            max: 18,
+	                            message: '用户名需大于6小于18个字符组成'
+	                        },
+	                        /*remote: {
+	                            url: 'remote.php',
+	                            message: 'The username is not available'
+	                        },*/
+	                        regexp: {
+	                            regexp: /^[a-zA-Z0-9]+$/,//_\.
+	                            message: '用户名只能由英文字母和数字组成'
+	                        }
+	                    }
+	                },
+	                email: {
+	                    validators: {
+	                        notEmpty: {
+	                            message: '请您输入邮箱地址'
+	                        },
+	                        emailAddress: {
+	                            message: '您输入的邮箱地址是非法的，请核对'
+	                        }
+	                    }
+	                },
+	                password: {
+	                    validators: {
+	                        notEmpty: {
+	                            message: '密码应大于6小于18位'
+	                        },
+	               			stringLength: {
+                        	min: 6,
+                        	max: 18,
+                        	message: '用户名需大于6小于18个字符组成'
+                    },
+	                    }
+	                }
+	            }
+	        })
+
+	});
+		        .on('success.form.bv', function(e) {
+	            // Prevent form submission
+	            e.preventDefault();
+
+	            // Get the form instance
+	            var $form = $(e.target);
+
+	            // Get the BootstrapValidator instance
+	            var bv = $form.data('bootstrapValidator');
+
+	            // Use Ajax to submit form data
+          $.post($form.attr('action'), $form.serialize(), function(result) {
+	                console.log(result);
+	            }, 'json');
+	        });
 	</script>
 
 </body>

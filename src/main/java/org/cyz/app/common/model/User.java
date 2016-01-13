@@ -26,6 +26,26 @@ public class User {
 	
 	private Date userDate;
 	
+	private Date usersignupdate;
+	
+	public Date getUsersignupdate() {
+		return usersignupdate;
+	}
+
+	public void setUsersignupdate(Date usersignupdate) {
+		this.usersignupdate = usersignupdate;
+	}
+
+	public boolean isUserstate() {
+		return userstate;
+	}
+
+	public void setUserstate(boolean userstate) {
+		this.userstate = userstate;
+	}
+
+	private boolean userstate;
+	
 	public String getUserId() {
 		return userId;
 	}

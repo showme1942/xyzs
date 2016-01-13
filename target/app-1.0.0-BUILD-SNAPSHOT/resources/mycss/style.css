@@ -1,3 +1,7 @@
+
+/*
+ * 导航栏
+ */
 .navbar {
 	padding-top: 10px;
 	background: #333;
@@ -32,4 +36,20 @@ ul.navbar-nav {
 }
 .navbar-inverse ul.navbar-nav li .li-social a:hover, 
 .navbar-inverse ul.navbar-nav li .li-social a:focus { border: 0; color: #19b9e7; }
+
+
+/* form表单 */
+
+
+
+
+
+
+
+
+
+
+
+
+
 

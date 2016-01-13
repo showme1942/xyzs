@@ -51,7 +51,7 @@
 								</h2>
 							</div>
 							<form id="defaultForm" method="post" class="form-horizontal"
-							action="${pageContext.request.contextPath}/postsignup" modelAttribute="signup">
+							action="${pageContext.request.contextPath}/signup" modelAttribute="signup">
 								<div class="form-group">
 									<label class="col-lg-3 control-label">用户名<i
 										class="fa fa-user">：</i></label>
