@@ -61,11 +61,25 @@ public class HomeController {
 		
 		return modelandview;
 	}
-	
+	@RequestMapping(value="/signup",method = RequestMethod.POST)
 	public @ResponseBody Object postSignup(@Valid Signup signup,BindingResult result, HttpServletResponse response, HttpServletRequest request){
+		
 		if (signup.getLoginmethod().equals("web")) {
+			ModelAndView modelandview = new ModelAndView();
+			String s=signup.getLoginmethod();
+			String username=request.getParameter("username");
+			String password=request.getParameter("password");
+			String email=request.getParameter("email");			
+			System.out.println(username);
+			System.out.println(password);
+			System.out.println(email);
+			modelandview.setViewName("/index");
+			return "index";
+		}else{
+			ModelAndView modelandview = new ModelAndView();
+			modelandview.setViewName("/head");
+			return "head";
 		}
-		return request;
 	}
 	
 }
