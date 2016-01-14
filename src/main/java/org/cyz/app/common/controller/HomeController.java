@@ -64,7 +64,6 @@ public class HomeController {
 		
 		if (signup.getLoginmethod().equals("web")) {
 			ModelAndView modelandview = new ModelAndView();
-			String s=signup.getLoginmethod();
 			String username=request.getParameter("username");
 			String password=request.getParameter("password");
 			String email=request.getParameter("email");			
